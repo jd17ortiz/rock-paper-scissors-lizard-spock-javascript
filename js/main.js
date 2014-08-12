@@ -1,6 +1,6 @@
 var game = game || {};
 
-game.model = function(user_choise){
+game.logic = function(user_choise){
 
 	var _private = {
 		calculatePlayMachine: function(){
@@ -29,11 +29,11 @@ game.model = function(user_choise){
 		},
 		array_combination: 
 		{
-			"scissors" : [3,1],
-			"paper" : [2,0],
+			"scissors" : [0,4],
+			"paper" : [2,3],
 			"rock" : [1,4],
-			"lizard" : [0,3],
-			"spock" : [4,2]
+			"lizard" : [0,2],
+			"spock" : [1,3]
 		},
 		array_option : ["rock", "paper", "scissors", "lizard", "spock"]
 
@@ -50,12 +50,12 @@ game.model = function(user_choise){
 	return _public
 };
 
-game.logic = function(){
+game.model = function(){
 
-	var model =  new game.model(0);
+	var logic =  new game.logic(0);
 
 }
 
 
-var new_game = new game.logic;
+var new_game = new game.model;
 
