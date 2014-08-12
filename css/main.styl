@@ -1,0 +1,37 @@
+main_orange = #fc6f11;
+
+body
+	background #dcf0f7
+	color main_orange
+	font-family Verdana
+
+.main
+	text-align center
+.game
+	width 100%
+	.choose-option
+		
+		li
+			display inline-block
+			width 200px
+			height 200px
+			border-radius 50%
+			margin-right 20px
+			cursor pointer
+			
+			&:hover
+				opacity 0.6
+
+		.rock
+			background #000 url('../images/rock-paper-scissors-lizard-spock-sprite.png') no-repeat 20px -169px
+
+		.paper
+			background #4af299 url('../images/rock-paper-scissors-lizard-spock-sprite.png') no-repeat 20px 40px
+
+		.scissors
+			background #fb7365 url('../images/rock-paper-scissors-lizard-spock-sprite.png') no-repeat -152px 22px
+
+		.lizard
+			background #fff71f url('../images/rock-paper-scissors-lizard-spock-sprite.png') no-repeat -152px -160px
+		.spock
+			background #cb51f8 url('../images/rock-paper-scissors-lizard-spock-sprite.png') no-repeat -351px 23px
