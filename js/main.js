@@ -8,25 +8,21 @@ game.logic = function(user_choise){
 		},
 		processPlay: function(){
 			var computer_choise = _private.randomChoise(0,4);
-
-			alert('USER PLAY: ' + _private.array_option[user_choise]);
-			alert('COMPUTER PLAY' + _private.array_option[computer_choise])
+			var winner;
 			var win_combination = _private.array_combination[_private.array_option[user_choise]];
 
 			if(computer_choise === user_choise){
 				_private.printMessage('TIE');
-				alert('TIE')
+				winner = 'Tie';
 			}else if(win_combination.indexOf(computer_choise)!=-1){
-				
-				alert('WIN COMPUTER')
-				_private.printMessage('win computer');
+				winner = 'Computer win';			
 			}else{
-				_private.printMessage('win user');
-				alert('WIN USER')
+				winner = 'User win';
 			}
+			_private.printMessage('<p>User play <strong>' + _private.array_option[user_choise] + '</strong> and computer play <strong>' + _private.array_option[computer_choise] +'</strong>. The result is: <span class="big-text">'+ winner + '</span></p>');
 		},
 		printMessage : function(msg){
-			document.getElementByClassName('results')[0].innerHtml=msg
+			document.getElementsByClassName('results')[0].innerHTML=msg
 		},
 		randomChoise: function(min, max){
 			var random = Math.floor( Math.random() * ( max - min + 1 ) + min );
