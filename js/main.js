@@ -50,12 +50,9 @@ game.logic = function(user_choise){
 	return _public
 };
 
-game.model = function(){
+	function playTurn(play){
+		var logic =  new game.logic(play);	
+	}
+	
 
-	var logic =  new game.logic(0);
-
-}
-
-
-var new_game = new game.model;
 
