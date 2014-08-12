@@ -14,13 +14,19 @@ game.logic = function(user_choise){
 			var win_combination = _private.array_combination[_private.array_option[user_choise]];
 
 			if(computer_choise === user_choise){
+				_private.printMessage('TIE');
 				alert('TIE')
 			}else if(win_combination.indexOf(computer_choise)!=-1){
-				alert('WIN COMPUTER')
-			}else{
 				
+				alert('WIN COMPUTER')
+				_private.printMessage('win computer');
+			}else{
+				_private.printMessage('win user');
 				alert('WIN USER')
 			}
+		},
+		printMessage : function(msg){
+			document.getElementByClassName('results')[0].innerHtml=msg
 		},
 		randomChoise: function(min, max){
 			var random = Math.floor( Math.random() * ( max - min + 1 ) + min );
